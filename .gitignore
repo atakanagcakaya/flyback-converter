@@ -1,0 +1,19 @@
+# Altium
+History/
+__Previews/
+Project Logs for */
+Project Outputs for */
+*.PrjPcbStructure
+*.SchDocPreview
+*.PcbDocPreview
+*.bak
+~$*
+.~lock*
+# LTspice
+*.raw
+*.log
+*.net
+*.fft
+# OS
+Thumbs.db
+desktop.ini
