@@ -78,6 +78,14 @@ The +5 V rail comes from a small buck converter fed by +12 V.
 The whole converter was simulated in LTspice: power stage, feedback loop, startup, protections, and the 18 V and 36 V input corners.
 The file is in the `simulation` folder.
 
+**Startup and load step.** Both outputs ramp up together with soft-start and settle at 12 V with no overshoot. At 7 ms a 0.95 A load step is applied for 1 ms. The output dips slightly and recovers right away.
+
+<img src="images/flyback_sim_startup.png" width="100%">
+
+**Short-circuit latch-off.** The +12 V output is shorted at 4.5 ms. The controller runs in current limit for about 3 ms, then the latch trips and switching stops. The converter stays off even after the short is removed.
+
+<img src="images/flyback_sim_short_circuit_latch.png" width="100%">
+
 ## Folders
 
 - `hardware` — Altium project, libraries and 3D models
